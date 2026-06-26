@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body> 
+  <!-- Header Section -->
+  <header>
+    <div class="cover-photo">
+      <!-- Navigation Menu -->
+      <nav>
+        <!-- Logo -->
+        <div class="logo">
+          <a href="#home">
+            <img src="images/logo (2).png" alt="My Logo">
+          </a>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger" id="hamburger">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#what-i-do">What I Do</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+          <li><a href="#contact">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <!-- Dark Mode Toggle -->
+      <button id="darkModeToggle">🌙 Dark Mode</button>
+
+      <!-- Top Clause -->
+      <div class="header-top-text">
+        <p>Welcome to My Portfolio</p>
+      </div>
+
+      <!-- Center Name + Typing Specialization -->
+      <div class="header-center-text">
+        <h1>Alazka Keith Kipchumba</h1>
+        <h3 id="typing"></h3>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to my personal portfolio website. Scroll down to learn more about me and my work.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <img src="images/profile.jpg" alt="My Profile Photo" class="profile-pic">
+    <h2>About Me</h2>
+    <p>Hello! I’m <b>Alazka Keith Kipchumba</b>, a passionate developer and designer 
+      who thrives on creating clean, modern, and functional web experiences.
+      With a strong foundation in HTML, CSS, JavaScript, and responsive design, 
+      I combine technical expertise with creativity to deliver projects that 
+      are both visually appealing and highly practical. Guided by values of 
+      reliability, innovation, and problem‑solving, I approach every challenge
+      with the goal of crafting solutions that make a meaningful impact. 
+      As I continue to grow as a front‑end developer, my ambition is to
+      contribute to projects that inspire, empower, and bring ideas to life.</p>
+
+    <p><em>“Alazka’s designs are both beautiful and practical.” – Peer Review</em></p>
+    <a href="#contact" class="cta-btn">Work With Me</a>
+  </section>
+
+  <!-- What I Do Section -->
+  <section id="what-i-do">
+    <h2>What I Do</h2>
+    <div class="cards-gallery">
+      <!-- Cards -->
+      <div class="card"><h3>💻 Website Designer</h3><p>Crafting modern, responsive websites with clean layouts and engaging visuals.</p><a href="#">Learn more</a></div>
+      <div class="card"><h3>🤖 AI Specialist</h3><p>Integrating intelligent solutions to enhance user experiences and workflows.</p><a href="#">Learn more</a></div>
+      <div class="card"><h3>🧩 Problem Solver</h3><p>Analyzing challenges and delivering creative, practical solutions that work.</p><a href="#">Learn more</a></div>
+      <div class="card"><h3>📊 Data Analyst</h3><p>Transforming raw data into actionable insights for smarter decision-making.</p><a href="#">Learn more</a></div>
+      <div class="card"><h3>💻 Web Development</h3><p>Building responsive, modern websites tailored to your needs.</p><a href="#">Learn more</a></div>
+      <div class="card"><h3>🎨 UI/UX Design</h3><p>Designing clean, user-friendly interfaces that engage audiences.</p><a href="#">Learn more</a></div>
+      <div class="card"><h3>📊 Data Analysis</h3><p>Turning raw data into insights that drive smarter decisions.</p><a href="#">Learn more</a></div>
+      <div class="card"><h3>🤝 Consulting</h3><p>Helping refine ideas and transform them into digital solutions.</p><a href="#">Learn more</a></div>
+    </div>
+    <a href="#contact" class="cta-btn">Work With Me</a>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="project-gallery">
+    
+    <!-- Project One -->
+    <div class="project-card">
+      <img src="images/proj1.1.png" alt="Project One">
+      <div class="layer">
+        <h3>Project One</h3>
+        <p>Website project of my portfolio.</p>
+        <!-- Link opens the project image -->
+        <a href="images/proj1.1.png" target="_blank">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <a href="images/proj1.png" target="_blank">
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+      </div>
+    </div>
+
+    <!-- Project Two -->
+    <div class="project-card">
+      <img src="images/work3.jpeg" alt="Project Two">
+      <div class="layer">
+        <h3>Project Two</h3>
+        <p>Another project description.</p>
+        <!-- Link opens the project image -->
+        <a href="images/work3.jpeg" target="_blank">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        </a>
+        <a href="images/work2.jpeg" target="_blank">
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2>My Certifications</h2>
+    <div class="certification-container">
+      <div class="cert-card">
+        <h3>Certification One</h3>
+        <p>Issued by: Ajira Digital</p>
+        <p>Date: January 2025</p>
+        <a href="cert1.pdf" target="_blank" class="btn">View Certificate</a>
+      </div>
+      <div class="cert-card">
+        <h3>Certification Two</h3>
+        <p>Issued by: Another Organization</p>
+        <p>Date: March 2026</p>
+        <a href="cert2.pdf" target="_blank" class="btn">View Certificate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact">
+    <div class="contact-container">
+    <!-- Left Side -->
+    <div class="contact-left">
+    <h2 class="sub-title">Contact Me</h2>
+
+    <div class="contact-info">
+        <p><i class="fa-solid fa-paper-plane"></i>keithkipchumba01@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>+254 726594668</p>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://linkedin.com/in/keith-k-b9802b295"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/alazkakeith24"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:keithkipchumba01@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://wa.me/254726594668"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <a href="images/KEITH AI Data Specialist._CV.pdf" download class="btn btn2">Download CV</a>
+</div>
+
+    <!-- Right Side -->
+    <div class="contact-right">
+      <h2>Send a Message</h2>
+      <form id="contactForm" action="https://formspree.io/f/xnjkabzp" method="POST">
+        <input type="text" id="name" name="Name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
