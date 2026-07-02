@@ -61,19 +61,53 @@ function showPopup(message, isSuccess = true) {
 }
 
 // Email format validation before sending
-contactForm.addEventListener("submit", function(event) {
+contactForm.addEventListener("submit", async function(event) {
   event.preventDefault();
 
   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
 
-  if (!emailInput.value.trim()) {
-    showPopup("Please enter your email.", false);
-  } else if (!emailPattern.test(emailInput.value.trim())) {
-    showPopup("Invalid email format.", false);
-  } else {
-    showPopup("✅ Message sent successfully!", true);
-    // Uncomment if using Formspree or similar:
-    // contactForm.submit();
+  // Validate name
+  if (nameInput.value.trim() === "") {
+    showPopup("Please enter your name.", false);
+    return;
+  }
+
+  // Validate email
+  if (!emailPattern.test(emailInput.value.trim())) {
+    showPopup("Please enter a valid email address.", false);
+    return;
+  }
+
+  // Validate message
+  if (messageInput.value.trim() === "") {
+    showPopup("Please enter your message.", false);
+    return;
+  }
+
+  showPopup("Sending message...", true);
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: {
+        Accept: "application/json"
+      }
+    });
+
+    if (response.ok) {
+      showPopup("✅ Message sent successfully!", true);
+      contactForm.reset();
+
+      // Remove validation messages
+      document.querySelectorAll(".input-feedback").forEach(el => el.remove());
+
+    } else {
+      showPopup("❌ Failed to send message. Please try again.", false);
+    }
+
+  } catch (error) {
+    showPopup("⚠️ Network error. Check your internet connection.", false);
   }
 });
 

@@ -67,18 +67,44 @@ body.dark-mode .logo img {
   align-items: center;
 }
 .nav-links a {
+  position: relative;
   text-decoration: none;
   color: white;
   font-weight: 700;
   padding: 6px 8px;
   border-radius: 6px;
-  transition: color 0.25s ease, transform 0.18s ease, background 0.18s ease;
+  transition: color 0.3s ease;
 }
-.nav-links a:hover { color: #ffcc00; transform: translateY(-2px); }
+
+/* Underline (hidden by default) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background: #ffcc00;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Show underline on hover */
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Keep underline on the active page */
 .nav-links a.active {
   color: #ffcc00;
-  border-bottom: 2px solid #ffcc00;
-  box-shadow: inset 0 -3px 0 #ffcc00;
+}
+
+.nav-links a.active::after {
+  width: 100%;
 }
 
 /* Hamburger */
@@ -361,12 +387,16 @@ section {
 }
 .certification-container a{
   text-decoration: none;
-  color: #040404;
+  color: #077593;
+}
+.certification-container a:hover{
+  color: #00b4d8;
+  transform: translateY(-2px);
 }
 /* Contact Section */
 #contact {
   min-height: 75vh;          /* full screen height */
-  width: 100vw;                /* stretch full width */
+  width: 100%;                /* stretch full width */
   display: flex;              /* correct flex value */
   align-items:center;                 /* vertically center */
   justify-content: center;
@@ -567,6 +597,10 @@ footer {
 body.dark-mode {
   background: #121212;
   color: #e0e0e0;
+}
+/* Keep portfolio name white in dark mode */
+body.dark-mode .header-center-text h1 {
+  color: #ffffff !important;
 }
 body.dark-mode nav { background: rgba(20, 20, 20, 0.95); }
 body.dark-mode .nav-links a { color: #e0e0e0; }
