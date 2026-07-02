@@ -172,7 +172,7 @@ hamburger.addEventListener("click", () => {
 });
 
 /// Typing Animation with Blinking Cursor
-const roles = ["Website Designer", "AI Specialist", "Problem Solver", "Data Analyst"];
+const roles = ["Web Designer", "AI Specialist", "Problem Solver", "Data Analyst"];
 let roleIndex = 0, charIndex = 0, isDeleting = false;
 const typingSpeed = 120, pauseBetweenRoles = 1500;
 

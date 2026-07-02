@@ -130,7 +130,20 @@ header .cover-photo {
   background-attachment: fixed;
   padding-top: 64px; /* account for fixed nav */
 }
+.about-roles {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e88e5;
+  text-align: center;
+  margin: 10px 0 25px;
+  letter-spacing: 0.5px;
+}
 
+.about-roles span {
+  color: #ffcc00;
+  margin: 0 10px;
+  font-weight: 800;
+}
 /* Top Clause */
 .header-top-text {
   position: absolute;
